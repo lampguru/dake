@@ -1,0 +1,32 @@
+/* initApp 通用后台全局CSS样式 */
+@charset "utf-8";
+/* 全局 */
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, pre, code,
+form, fieldset, legend, p, th, td {margin: 0;padding: 0;}
+img {border: 0;}
+cite,em,strong,th{font-style: inherit;font-weight: inherit;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
+input,button,textarea,select{font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;}
+input,button,textarea,select{*font-size: 100%;}
+ol, ul {list-style: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+th{text-align: left;}
+pre{ margin:20px;}
+:link, :visited {text-decoration: none;}
+td,th,div{word-break:break-all;word-wrap:break-word}
+form{display:inline;}
+*{outline:none}
+.hidden{ display:none;}
+body{ height:100%; }
+a { color:#000000;}
+a:hover{ color:#FF6600;}
+/** 按钮 **/
+.btn2 {padding: 3px 4px 2px 4px;font-size:12px; width:50px; min-width:50px;height:23;background-color:#ece9d8;border-width:1; cursor:pointer;}
+.btn {padding: 3px 4px 2px 4px;font-size:12px; width:50px; min-width:50px;height:23;background-color:#ece9d8;border-width:1; cursor:pointer;}
+#ajaxloading{display:none; position:absolute; top:30%; left:40%;}
+
+
+
+
+

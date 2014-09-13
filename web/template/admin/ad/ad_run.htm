@@ -1,0 +1,37 @@
+<div class="content_tab">
+  <ul>
+    <li class="checked"  name="<!--{echo $adRun;}-->">广告位列表</li>
+	<li  name="<!--{echo $adAdd;}-->">新增广告位</li>
+  </ul>
+ </div>
+<div class="content">
+  <h1>广告位列表</h1>
+  <table>
+    <tr>
+      <th width="60">ID</th>
+      <th width="160">广告位名称</th>
+      <th width="100">唯一标识</th>
+      <th width="200">描述</th>
+      <th width="140">创建时间</th>
+      <th>操作</th>
+    </tr>
+    <!--{foreach ($adPositionList as $value) {}-->
+    <tr>
+      <td><!--{echo $value['id'];}--></td>
+      <td><!--{echo $value['name'];}--></td>
+      <td><!--{echo $value['tag'];}--></td>
+      <td><!--{echo $value['descrip'];}--></td>
+      <td><!--{echo date('Y-m-d H:i:s', $value['create_time']);}--></td>
+      <td><a href="<!--{echo $adEdit;}-->&id=<!--{echo $value['id'];}-->">[编辑]</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:del('您真的要删除该广告位么，删除广告位将删除广告位下的广告？', '<!--{echo $adDel;}-->', 'id=<!--{echo $value['id'];}-->&init_token=<!--{echo $init_token;}-->');">[删除]</a></td>
+    </tr>
+    <!--{}}-->
+	<!--{if ($adPositionCount == 0) {}-->
+	<tr>
+	<td colspan="6">暂时没有任何数据！</td>
+	</tr>
+	<!--{}}-->
+  </table>
+  <div class="page">
+    <!--{echo InitPHP::output($page, 'decode');}-->
+  </div>
+</div>
