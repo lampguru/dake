@@ -1,1 +1,0 @@
-<?php exit;?>1331444179(0)a:2:{s:1:"k";s:17:"site_basic_config";s:1:"v";s:87:"{"title":"www","url":"22222222","keywords":"","description":"","beian":"","version":""}";}

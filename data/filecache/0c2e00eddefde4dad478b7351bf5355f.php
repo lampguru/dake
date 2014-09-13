@@ -1,1 +1,0 @@
-<?php exit;?>1331443655(0)a:2:{s:1:"k";s:11:"site_access";s:1:"v";s:65:"{"admin_allow":"","admin_ban":"","front_allow":"","front_ban":""}";}
