@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--{if (STATIC_PATH != '') {}-->
+<base href="<!--{echo STATIC_PATH}-->" />
+<!--{}}-->
+<link href="static/css/admin/comm.css" rel="stylesheet" type="text/css">
+<link href="static/css/admin/index.css" rel="stylesheet" type="text/css">
+<script src="static/js/common/jquery.js" type="text/javascript"></script>
+<title>静态模板页面</title>
+</head>
+<body>
+<div class="warp">
+  <div class="header">
+    <div class="logo">大可管理后台</div>
+    <div class="banner">
+      <ul id="nav">
+        <!--{foreach($navConfig['nav'] as $key => $val) { }-->
+        <li title="initapp_sidebar_<!--{echo $key;}-->">
+          <!--{echo $val;}-->
+        </li>
+        <!--{}}-->
+      </ul>
+    </div>
+	 <div class="head_right">当前用户：<!--{echo $userInfo['username'];}-->&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<!--{echo $indexLoginout;}-->">[注销]</a></div>
+  </div>
+  <div class="main">
+    <div class="left">
+      <!--{foreach($navConfig['sidebar'] as $k => $v) { }-->
+      <div id="initapp_sidebar_<!--{echo $k;}-->" class="hidden sidebar">
+        <!--{foreach ($v as $kk => $vv) { }-->
+        <div class="title" title="initapp_option_<!--{echo $kk;}-->">
+          <!--{echo $vv['title'];}-->
+        </div>
+        <ul class="hidden sidebar_list" id="initapp_option_<!--{echo $kk;}-->">
+          <!--{foreach ($vv['option'] as $kkk => $vvv) { 
+		  	if ($vvv[3] == 0) continue;
+		  }-->
+		  
+          <li onclick="javascript:content_iframe.location.href='<!--{echo ADMIN_FILE}-->?c=<!--{echo $vvv[1];}-->&a=<!--{echo $vvv[2];}-->'">
+        <!--{echo $vvv[0];}-->
+          </li>
+		  
+          <!--{}}-->
+        </ul>
+        <!--{}}-->
+      </div>
+      <!--{}}-->
+    </div>
+    <div class="right">
+	<iframe name="content_iframe" src="<!--{echo $indexDefault;}-->" style="border:0px; width:100%; height:600px;" frameborder="no" border="0" marginwidth="0" marginheight="0"  allowtransparency="yes"></iframe>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="info">Prowerd By Initphp,Dake,Zhu</div>
+  </div>
+</div>
+<script src="static/js/admin/sidebar.js" type="text/javascript"></script>
+</body>
+</html>

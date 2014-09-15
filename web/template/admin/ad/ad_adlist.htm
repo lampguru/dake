@@ -1,0 +1,55 @@
+<div class="content_tab">
+  <ul>
+    <li class="checked"  name="<!--{echo $adAdlist;}-->">广告列表</li>
+    <li   name="<!--{echo $adAdadd;}-->">新增广告</li>
+  </ul>
+</div>
+<div class="content">
+  <h1>广告列表</h1>
+  <table>
+    <tr>
+      <th width="40">ID</th>
+	  <th width="40">排序</th>
+      <th width="80">广告名称</th>
+	  <th width="80">广告位</th>
+	  <th width="80">广告类型</th>
+	  <th width="80">广告状态</th>
+      <th width="140">开始时间</th>
+      <th width="140">结束时间</th>
+      <th width="140">创建时间</th>
+      <th>操作</th>
+    </tr>
+    <!--{foreach ($adList as $value) {}-->
+    <tr>
+      <td><!--{echo $value['id'];}--></td>
+	   <td><!--{echo $value['sort'];}--></td>
+      <td><!--{echo $value['name'];}--></td>
+	  <td><!--{echo $adPositionList[$value['posid']]['name'];}--></td>
+	  <td><!--{if ($value['type'] == 0) { }-->
+       	图片广告
+        <!--{} else { }-->
+        文字广告
+        <!--{} }-->
+      </td>
+	  <td><!--{if ($value['status'] == 1) { }-->
+        <div class="s1">开启</div>
+        <!--{} else { }-->
+        <div class="s2">关闭</div>
+        <!--{} }-->
+      </td>
+      <td><!--{echo date('Y-m-d H:i:s', $value['start_time']);}--></td>
+      <td><!--{echo date('Y-m-d H:i:s', $value['end_time']);}--></td>
+      <td><!--{echo date('Y-m-d H:i:s', $value['create_time']);}--></td>
+      <td><a href="<!--{echo $adAdedit;}-->&id=<!--{echo $value['id'];}-->">[编辑]</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:del('确定要删除该广告？', '<!--{echo $adAddel;}-->', 'id=<!--{echo $value['id'];}-->&init_token=<!--{echo $init_token;}-->');">[删除]</a></td>
+    </tr>
+    <!--{}}-->
+    <!--{if ($adCount == 0) {}-->
+    <tr>
+      <td colspan="6">暂时没有任何数据！</td>
+    </tr>
+    <!--{}}-->
+  </table>
+  <div class="page">
+    <!--{echo InitPHP::output($page, 'decode');}-->
+  </div>
+</div>

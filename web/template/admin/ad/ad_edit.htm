@@ -1,0 +1,38 @@
+<div class="content_tab">
+  <ul>
+    <li class="checked"  name="<!--{echo $adRun;}-->">广告位列表</li>
+	<li  name="<!--{echo $adAdd;}-->">新增广告位</li>
+  </ul>
+</div>
+<div class="content">
+  <h1>编辑广告位</h1>
+  <form name="editAdPosition" method="post" id="editAdPosition" action="<!--{echo $adEditdo;}-->">
+  <input name="init_token" type="hidden"  value="<!--{echo $init_token;}-->" >
+   <input name="id" type="hidden" value="<!--{echo $adPositionInfo['id'];}-->">
+    <table>
+      <tr>
+        <th width="200">广告位名称</th>
+        <td class="top_broder"><input name="name" value="<!--{echo $adPositionInfo['name'];}-->" maxlength="20" class="input"  />
+          <span></span> </td>
+      </tr>
+      <tr>
+        <th width="200">广告位标识</th>
+        <td class="top_broder"><input name="tag" value="<!--{echo $adPositionInfo['tag'];}-->" maxlength="20" class="input"  />
+          <span>英文字母和_</span> </td>
+      </tr>
+      <tr>
+        <th width="200">广告位描述</th>
+        <td><textarea name="descrip" class="textarea"><!--{echo $adPositionInfo['descrip'];}--></textarea></td>
+      </tr>
+      <tr>
+        <th width="200"></th>
+        <td><input value="提交" type="submit" class="btn2" /></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	submitForm('editAdPosition', '<!--{echo $adRun;}-->');
+});
+</script>
