@@ -1,4 +1,4 @@
-<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 05:34:26, compiled from E:\www\dake/web/template/admin/single/add.htm */ ?>
+<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 09:08:23, compiled from E:\www\dake/web/template/admin/single/add.htm */ ?>
 <div class="content_tab">
   <ul>
     <li  name="<?php echo $singleRun; ?>">单页管理</li>
@@ -29,15 +29,14 @@
       </tr>
       <tr>
         <th width="200">单页内容</th>
-        <td><div id="ad_img">
+        <td>
+          <div id="ad_img">
             <input name="img" type="file">&nbsp;&nbsp;&nbsp;&nbsp;图片宽度： <input class="input wh50" name="img_width" type="text" value="100" maxlength="5" />&nbsp;&nbsp;&nbsp;&nbsp;图片高度： <input class="input wh50" maxlength="5" name="img_height" type="text" value="100" />&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
-          <div id="ad_str" style="display:none;">链接：
-            <input class="input" name="link" type="text" value="http://" />
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            文字：
-            <input name="str" type="text" class="input"/>
-          </div></td>
+          <div id="ad_str" style="display:none;">
+            <textarea name="str" style="width:700px;height:200px;visibility:hidden;"></textarea>
+          </div>
+        </td>
       </tr>
       <tr>
         <th width="200">单页状态</th>
@@ -60,6 +59,20 @@
   </form>
 </div>
 <script type="text/javascript">
+KindEditor.ready(function(K) {
+	var editor1 = K.create('textarea[name="str"]', {
+		cssPath : 'static/js/common/kindeditor/plugins/code/prettify.css',
+		uploadJson : 'static/js/common/kindeditor/php/upload_json.php',
+		fileManagerJson : 'static/js/common/kindeditor/php/file_manager_json.php',
+		allowFileManager : true,
+		items : [
+			'source', '|', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+			'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+			'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+
+	});
+	prettyPrint();
+});
 var singleContent = function () {
 	var val = $("#adtype").val();
 	if (val == 0) {

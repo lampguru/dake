@@ -1,4 +1,4 @@
-<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 03:13:34, compiled from E:\www\dake/web/template/admin/single/edit.htm */ ?>
+<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 09:35:10, compiled from E:\www\dake/web/template/admin/single/edit.htm */ ?>
 <div class="content_tab">
   <ul>
     <li class="checked"  name="<?php echo $singleRun; ?>">单页管理</li>
@@ -7,7 +7,7 @@
 </div>
 <div class="content">
   <h1>编辑单页</h1>
-  <form name="editSingle" enctype="multipart/form-data" method="post" id="edit" action="<?php echo $singleEditDo; ?>">
+  <form name="editSingle" enctype="multipart/form-data" method="post" id="editSingle" action="<?php echo $singleEditDo; ?>">
     <input name="init_token" type="hidden"  value="<?php echo $init_token; ?>" >
 	 <input name="id" type="hidden"  value="<?php echo $singleInfo['id']; ?>" >
     <table>
@@ -28,11 +28,8 @@
 			<?php } ?>
             <input name="img" type="file">&nbsp;&nbsp;&nbsp;&nbsp;图片宽度： <input class="input wh50" name="img_width" type="text" value="100" maxlength="5" />&nbsp;&nbsp;&nbsp;&nbsp;图片高度： <input class="input wh50" maxlength="5" name="img_height" type="text" value="100" />&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
-          <div id="ad_str" <?php if ($singleInfo['type'] == 0) { ?>style="display:none;"<?php } ?>>链接：
-            <input class="input" name="link" type="text" value="<?php echo $singleInfo['link']; ?>" />
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            文字：
-            <input name="str" type="text" class="input" value="<?php echo $singleInfo['str']; ?>"/>
+          <div id="ad_str" <?php if ($singleInfo['type'] == 0) { ?>style="display:none;"<?php } ?>>
+          <textarea name="str" style="width:700px;height:200px;visibility:hidden;"><?php echo $singleInfo['str']; ?></textarea>
           </div></td>
       </tr>
       <tr>
@@ -56,6 +53,20 @@
   </form>
 </div>
 <script type="text/javascript">
+KindEditor.ready(function(K) {
+	var editor1 = K.create('textarea[name="str"]', {
+		cssPath : 'static/js/common/kindeditor/plugins/code/prettify.css',
+		uploadJson : 'static/js/common/kindeditor/php/upload_json.php',
+		fileManagerJson : 'static/js/common/kindeditor/php/file_manager_json.php',
+		allowFileManager : true,
+		items : [
+			'source', '|', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+			'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+			'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+
+	});
+	prettyPrint();
+});
 var singleContent = function () {
 	var val = $("#adtype").val();
 	if (val == 0) {

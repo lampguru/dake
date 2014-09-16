@@ -1,4 +1,4 @@
-<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-15 04:33:46, compiled from E:\www\dake/web/template/admin/site/access_run.htm */ ?>
+<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 06:57:07, compiled from E:\www\dake/web/template/admin/site/access_run.htm */ ?>
 <div class="content_tab">
   <ul>
     <li class="checked"  name="<?php echo $siteRun; ?>">访问权限控制</li>
