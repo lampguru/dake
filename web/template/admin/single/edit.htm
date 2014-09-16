@@ -8,6 +8,7 @@
   <h1>编辑单页</h1>
   <form name="editSingle" enctype="multipart/form-data" method="post" id="editSingle" action="<!--{echo $singleEditDo;}-->">
     <input name="init_token" type="hidden"  value="<!--{echo $init_token;}-->" >
+    <input name="type" type="hidden"  value="<!--{echo $singleInfo['type'];}-->" >
 	 <input name="id" type="hidden"  value="<!--{echo $singleInfo['id'];}-->" >
     <table>
       <tr>

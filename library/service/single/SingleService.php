@@ -126,7 +126,8 @@ class SingleService extends BaseService {
 		if ($type == false) { // 新增 组装content字段
 			if ($data ['type'] == 1) {
 				$data ['content'] = json_encode ( array (
-						'str' => urlencode ( $data ['str'] ) 
+						//'str' => urlencode ( $data ['str'] )
+						'str' => $data ['str'] 
 				) );
 			} else {
 				if (isset ( $data ['img'] )) {
@@ -140,7 +141,7 @@ class SingleService extends BaseService {
 		} else {
 			if ($data ['type'] == 1) {
 				$data ['content'] = json_decode ( $data ['content'], TRUE );
-				$data ['str'] = urldecode ( $data ['content'] ['str'] );
+				$data ['str'] =  $data ['content'] ['str'] ;
 			} else {
 				$data ['content'] = json_decode ( $data ['content'], TRUE );
 				$data ['img'] = urldecode ( $data ['content'] ['img'] );

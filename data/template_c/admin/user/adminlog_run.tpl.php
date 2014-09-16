@@ -1,4 +1,4 @@
-<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-15 07:10:14, compiled from E:\www\dake/web/template/admin/user/adminlog_run.htm */ ?>
+<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 14:04:50, compiled from E:\VertrigoServ\www\dake/web/template/admin/user/adminlog_run.htm */ ?>
 <div class="content_tab">
   <ul>
     <li class="checked" name="<?php echo $adminlogRun; ?>">后台管理日志</li>
