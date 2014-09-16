@@ -1,4 +1,4 @@
-<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-15 08:24:53, compiled from E:\www\dake/web/template/admin/single/single_add.htm */ ?>
+<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 01:27:26, compiled from E:\www\dake/web/template/admin/single/single_add.htm */ ?>
 
 <div class="content_tab">
   <ul>

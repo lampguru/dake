@@ -43,18 +43,12 @@ $sidebar['extend']['ad']['option'] = array(
 );
 $sidebar['extend']['single']['title'] = '单页管理';
 $sidebar['extend']['single']['option'] = array(
-	array('单页模块管理', 'single', 'run', 1),
-	array('编辑单页模块', 'single', 'edit', 0),
-	array('编辑单页模块操作', 'single', 'edit_do', 0), 
-	array('删除单页模块', 'single', 'del', 0),
-	array('新增单页模块', 'single', 'add', 0),
-	array('新增单页模块操作', 'single', 'add_do', 0),
-	array('单页管理', 'single', 'single', 1),
-	array('新增单页', 'single', 'single_add', 0),
-	array('新增单页操作', 'single', 'single_add_do', 0),
-	array('编辑单页', 'single', 'single_edit', 0),
-	array('编辑单页操作', 'single', 'single_edit_do', 0),
-	array('删除单页', 'single', 'single_del', 0),
+	array('单页管理', 'single', 'run', 1),
+	array('新增单页', 'single', 'add', 0),
+	array('新增单页操作', 'single', 'add_do', 0),
+	array('编辑单页', 'single', 'edit', 0),
+	array('编辑单页操作', 'single', 'edit_do', 0), 
+	array('删除单页', 'single', 'del', 0),
 );
 
 return array('nav' => $nav, 'sidebar' => $sidebar);

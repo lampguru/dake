@@ -1,4 +1,4 @@
-<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-15 08:25:14, compiled from E:\www\dake/web/template/admin/single/single_run.htm */ ?>
+<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 01:27:29, compiled from E:\www\dake/web/template/admin/single/single_run.htm */ ?>
 <div class="content_tab">
   <ul>
     <li class="checked"  name="<?php echo $singleRun; ?>">单页模块列表</li>

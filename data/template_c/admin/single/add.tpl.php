@@ -1,13 +1,13 @@
-<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 01:23:07, compiled from E:\www\dake/web/template/admin/single/single_singleadd.htm */ ?>
+<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 05:34:26, compiled from E:\www\dake/web/template/admin/single/add.htm */ ?>
 <div class="content_tab">
   <ul>
-    <li  name="<?php echo $singleSingle; ?>">单页管理</li>
-    <li class="checked"   name="<?php echo $singleSingleAdd; ?>">新增单页</li>
+    <li  name="<?php echo $singleRun; ?>">单页管理</li>
+    <li class="checked"   name="<?php echo $singleAdd; ?>">新增单页</li>
   </ul>
 </div>
 <div class="content">
   <h1>新增单页</h1>
-  <form name="add" enctype="multipart/form-data" method="post" id="add" action="<?php echo $singleSingleAdddo; ?>">
+  <form name="addSingle" enctype="multipart/form-data" method="post" id="addSingle" action="<?php echo $singleAddDo; ?>">
     <input name="init_token" type="hidden"  value="<?php echo $init_token; ?>" >
     <table>
       <tr>
@@ -20,21 +20,10 @@
         <td><textarea name="descrip" class="textarea"></textarea></td>
       </tr>
       <tr>
-        <th width="200">单页模块</th>
-        <td class="top_broder"><select name="modid" >
-            <?php foreach ($moduleList as $key => $val) { ?>
-            <option value="<?php echo $val[id]; ?>">
-            <?php echo $val[name]; ?>
-            </option>
-            <?php } ?>
-          </select>
-          <span></span> </td>
-      </tr>
-      <tr>
-        <th width="200">广告类型</th>
+        <th width="200">单页类型</th>
         <td class="top_broder"><select name="type" id="adtype">
-            <option value="0">图片广告</option>
-            <option value="1">文字广告</option>
+            <option value="0">图片单页</option>
+            <option value="1">文字单页</option>
           </select>
           <span></span> </td>
       </tr>
@@ -82,7 +71,7 @@ var singleContent = function () {
 	}
 }
 $(document).ready(function() {
-	submitForm('add', '<?php echo $singleSingle; ?>');
+	submitForm('addSingle', '<?php echo $singleRun; ?>');
 	$("#adtype").bind("click", singleContent); 
 });
 </script>

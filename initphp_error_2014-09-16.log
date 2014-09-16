@@ -1,0 +1,1 @@
+[2014-09-16 02:03:03]msg:E:\www\dake/web/template/admin/single/run.htm is not exist!;file:E:\www\dake\initphp\initphp.php;line:380;code:		throw new exceptionInit($msg, $code);
