@@ -76,7 +76,7 @@ class singleController extends BaseAdminController {
 				'name',
 				'type',
 				'descrip',
-				'content',
+				'str',
 				'status',
 				'img_width',
 				'img_height',
