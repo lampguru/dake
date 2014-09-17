@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2014 年 09 月 16 日 17:37
+-- 生成日期: 2014 年 09 月 17 日 17:51
 -- 服务器版本: 5.5.34
 -- PHP 版本: 5.3.28
 
@@ -23,10 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `initapp_admin_group`
+-- 表的结构 `dake_admin_group`
 --
 
-CREATE TABLE IF NOT EXISTS `initapp_admin_group` (
+CREATE TABLE IF NOT EXISTS `dake_admin_group` (
   `groupid` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL DEFAULT '',
   `descrip` varchar(255) NOT NULL DEFAULT '',
@@ -37,19 +37,19 @@ CREATE TABLE IF NOT EXISTS `initapp_admin_group` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- 转存表中的数据 `initapp_admin_group`
+-- 转存表中的数据 `dake_admin_group`
 --
 
-INSERT INTO `initapp_admin_group` (`groupid`, `name`, `descrip`, `create_time`, `if_default`, `rvalue`) VALUES
+INSERT INTO `dake_admin_group` (`groupid`, `name`, `descrip`, `create_time`, `if_default`, `rvalue`) VALUES
 (1, 'super', '超级管理员', 1410254747, 0, 'system_admin_user_run,system_admin_user_edit,system_admin_user_editdo,system_admin_user_del,system_admin_user_add,system_admin_user_adddo,system_admin_group_run,system_admin_group_edit,system_admin_group_editdo,system_admin_group_del,system_admin_group_add,system_admin_group_adddo,system_admin_adminlog_run,system_admin_adminlog_detail,system_site_site_run,system_site_site_editdo,system_site_access_run,system_site_access_editdo,extend_ad_ad_run,extend_ad_ad_edit,extend_ad_ad_editdo,extend_ad_ad_del,extend_ad_ad_add,extend_ad_ad_adddo,extend_ad_ad_adlist,extend_ad_ad_adadd,extend_ad_ad_adadddo,extend_ad_ad_adedit,extend_ad_ad_adeditdo,extend_ad_ad_addel');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `initapp_admin_log`
+-- 表的结构 `dake_admin_log`
 --
 
-CREATE TABLE IF NOT EXISTS `initapp_admin_log` (
+CREATE TABLE IF NOT EXISTS `dake_admin_log` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(25) NOT NULL DEFAULT '',
   `ip` varchar(25) NOT NULL DEFAULT '',
@@ -61,13 +61,13 @@ CREATE TABLE IF NOT EXISTS `initapp_admin_log` (
   PRIMARY KEY (`id`),
   KEY `idx_update_time` (`update_time`),
   KEY `idx_username` (`username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=193 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=244 ;
 
 --
--- 转存表中的数据 `initapp_admin_log`
+-- 转存表中的数据 `dake_admin_log`
 --
 
-INSERT INTO `initapp_admin_log` (`id`, `username`, `ip`, `update_time`, `controller`, `action`, `msg`, `data`) VALUES
+INSERT INTO `dake_admin_log` (`id`, `username`, `ip`, `update_time`, `controller`, `action`, `msg`, `data`) VALUES
 (1, 'admin', '::1', 1410239940, 'index', 'logindo', '登录成功！', '%7B%22initphp_token%22%3A%223024c840%22%2C%22username%22%3A%22admin%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D'),
 (2, 'admin', '::1', 1410239989, 'site', 'editdo', '更新成功！', '%7B%22init_token%22%3A%223024c840%22%2C%22site%22%3A%7B%22title%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22url%22%3A%22%22%2C%22keywords%22%3A%22%22%2C%22description%22%3A%22%22%2C%22beian%22%3A%22%22%2C%22version%22%3A%22%22%7D%7D'),
 (3, '', '::1', 1410245231, 'index', 'logindo', '用户名或者密码为空！', '%7B%22initphp_token%22%3A%22eaa1e590%22%2C%22username%22%3A%22%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D'),
@@ -231,7 +231,7 @@ INSERT INTO `initapp_admin_log` (`id`, `username`, `ip`, `update_time`, `control
 (161, 'admin', '::1', 1410848689, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22e3ed2739%22%2C%22id%22%3A%223%22%2C%22name%22%3A%22%5Cu4f01%5Cu4e1a%5Cu6587%5Cu5316%22%2C%22descrip%22%3A%22%5Cu4e8b%5Cu4ee5%5Cu8bda%5Cu4fe1%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22link%22%3A%22%22%2C%22str%22%3A%22%22%2C%22status%22%3A%220%22%2C%22sort%22%3A%220%22%7D'),
 (162, 'admin', '::1', 1410850615, 'index', 'logindo', '登录成功！', '%7B%22initphp_token%22%3A%22e3ed2739%22%2C%22username%22%3A%22admin%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D'),
 (163, 'admin', '::1', 1410854281, 'index', 'logindo', '登录成功！', '%7B%22initphp_token%22%3A%22e3ed2739%22%2C%22username%22%3A%22admin%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D');
-INSERT INTO `initapp_admin_log` (`id`, `username`, `ip`, `update_time`, `controller`, `action`, `msg`, `data`) VALUES
+INSERT INTO `dake_admin_log` (`id`, `username`, `ip`, `update_time`, `controller`, `action`, `msg`, `data`) VALUES
 (164, 'admin', '::1', 1410854415, 'single', 'add_do', '文件上传失败，请检查文件类型，大小！', '%7B%22init_token%22%3A%22e3ed2739%22%2C%22name%22%3A%22Test+editor%22%2C%22descrip%22%3A%22%26lt%3Bp%26gt%3B%5Cn%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23E53333%3B%5C%5C%26quot%3B%26gt%3BTest+editor%26lt%3B%5C%2Fspan%26gt%3B%5Cn%26lt%3B%5C%2Fp%26gt%3B%5Cn%26lt%3Bp%26gt%3B%5Cn%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3BTest+editor%26lt%3B%5C%2Fspan%26gt%3B%5Cn%26lt%3B%5C%2Fp%26gt%3B%5Cn%26lt%3Bp%26gt%3B%5Cn%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23FF9900%3B%5C%5C%26quot%3B%26gt%3BTest+editor%26lt%3B%5C%2Fspan%26gt%3B+%5Cn%26lt%3B%5C%2Fp%26gt%3B%22%2C%22type%22%3A%220%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22link%22%3A%22http%3A%5C%2F%5C%2F%22%2C%22str%22%3A%22%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%220%22%7D'),
 (165, 'admin', '::1', 1410854422, 'single', 'add_do', '文件上传失败，请检查文件类型，大小！', '%7B%22init_token%22%3A%22e3ed2739%22%2C%22name%22%3A%22Test+editor%22%2C%22descrip%22%3A%22%26lt%3Bp%26gt%3B%5Cn%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23E53333%3B%5C%5C%26quot%3B%26gt%3BTest+editor%26lt%3B%5C%2Fspan%26gt%3B%5Cn%26lt%3B%5C%2Fp%26gt%3B%5Cn%26lt%3Bp%26gt%3B%5Cn%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3BTest+editor%26lt%3B%5C%2Fspan%26gt%3B%5Cn%26lt%3B%5C%2Fp%26gt%3B%5Cn%26lt%3Bp%26gt%3B%5Cn%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23FF9900%3B%5C%5C%26quot%3B%26gt%3BTest+editor%26lt%3B%5C%2Fspan%26gt%3B+%5Cn%26lt%3B%5C%2Fp%26gt%3B%22%2C%22type%22%3A%220%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22link%22%3A%22http%3A%5C%2F%5C%2F%22%2C%22str%22%3A%22%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%220%22%7D'),
 (166, 'admin', '::1', 1410854453, 'single', 'add_do', '文件上传失败，请检查文件类型，大小！', '%7B%22init_token%22%3A%22e3ed2739%22%2C%22name%22%3A%22Test+editor%22%2C%22descrip%22%3A%22%26lt%3Bp%26gt%3B%5Cn%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23E53333%3B%5C%5C%26quot%3B%26gt%3BTest+editor%26lt%3B%5C%2Fspan%26gt%3B%5Cn%26lt%3B%5C%2Fp%26gt%3B%5Cn%26lt%3Bp%26gt%3B%5Cn%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3BTest+editor%26lt%3B%5C%2Fspan%26gt%3B%5Cn%26lt%3B%5C%2Fp%26gt%3B%5Cn%26lt%3Bp%26gt%3B%5Cn%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23FF9900%3B%5C%5C%26quot%3B%26gt%3BTest+editor%26lt%3B%5C%2Fspan%26gt%3B+%5Cn%26lt%3B%5C%2Fp%26gt%3B%22%2C%22type%22%3A%220%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22link%22%3A%22http%3A%5C%2F%5C%2F%22%2C%22str%22%3A%22%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%220%22%7D'),
@@ -260,15 +260,66 @@ INSERT INTO `initapp_admin_log` (`id`, `username`, `ip`, `update_time`, `control
 (189, 'admin', '::1', 1410859429, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22e3ed2739%22%2C%22id%22%3A%223%22%2C%22name%22%3A%22%5Cu4f01%5Cu4e1a%5Cu6587%5Cu5316%22%2C%22descrip%22%3A%22%5Cu4e8b%5Cu4ee5%5Cu8bda%5Cu4fe1%5Cn%5Cu4e8b%5Cu65e0%5Cu4e0d%5Cu6210%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%22%2C%22status%22%3A%220%22%2C%22sort%22%3A%220%22%7D'),
 (190, 'admin', '::1', 1410859584, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22e3ed2739%22%2C%22id%22%3A%223%22%2C%22name%22%3A%22%5Cu4f01%5Cu4e1a%5Cu6587%5Cu5316%22%2C%22descrip%22%3A%22%5Cu4e8b%5Cu4ee5%5Cu8bda%5Cu4fe1%5Cn%5Cu4e8b%5Cu65e0%5Cu4e0d%5Cu6210%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%22%2C%22status%22%3A%220%22%2C%22sort%22%3A%220%22%7D'),
 (191, 'admin', '::1', 1410859627, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22e3ed2739%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bp%26gt%3B%5Cn%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3Baaa%5Cn%26lt%3B%5C%2Fp%26gt%3B%5Cn%26lt%3Bp%26gt%3B%5Cn%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3Bbbb%5Cn%26lt%3B%5C%2Fp%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%221%22%7D'),
-(192, 'admin', '::1', 1410860103, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22e3ed2739%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%5Cu67f1%5Cu54e5%5Cu4f60%5Cu8bd5%5Cu4e00%5Cu8bd5%5Cuff0c%5Cu8fd9%5Cu5757%5Cu4e0a%5Cu4f20%5Cu6709%5Cu95ee%5Cu9898%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%221%22%7D');
+(192, 'admin', '::1', 1410860103, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22e3ed2739%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%5Cu67f1%5Cu54e5%5Cu4f60%5Cu8bd5%5Cu4e00%5Cu8bd5%5Cuff0c%5Cu8fd9%5Cu5757%5Cu4e0a%5Cu4f20%5Cu6709%5Cu95ee%5Cu9898%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%221%22%7D'),
+(193, 'admin', '::1', 1410920954, 'index', 'logindo', '登录成功！', '%7B%22initphp_token%22%3A%22af305a48%22%2C%22username%22%3A%22admin%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D'),
+(194, 'admin', '::1', 1410920956, 'index', 'logindo', '登录成功！', '%7B%22initphp_token%22%3A%22af305a48%22%2C%22username%22%3A%22admin%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D'),
+(195, 'admin', '::1', 1410920968, 'index', 'logindo', '登录成功！', '%7B%22initphp_token%22%3A%22af305a48%22%2C%22username%22%3A%22admin%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D'),
+(196, 'admin', '::1', 1410920969, 'index', 'logindo', '登录成功！', '%7B%22initphp_token%22%3A%22af305a48%22%2C%22username%22%3A%22admin%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D'),
+(197, 'admin', '::1', 1410920980, 'index', 'logindo', '登录成功！', '%7B%22initphp_token%22%3A%22af305a48%22%2C%22username%22%3A%22admin%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D'),
+(198, 'admin', '::1', 1410921004, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%5Cu67f1%5Cu54e5%5Cu4f60%5Cu8bd5%5Cu4e00%5Cu8bd5%5Cuff0c%5Cu8fd9%5Cu5757%5Cu4e0a%5Cu4f20%5Cu6709%5Cu95ee%5Cu9898.%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%221%22%7D'),
+(199, 'admin', '::1', 1410921075, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%220%22%2C%22id%22%3A%223%22%2C%22name%22%3A%22%5Cu4f01%5Cu4e1a%5Cu6587%5Cu5316%22%2C%22descrip%22%3A%22%5Cu4e8b%5Cu4ee5%5Cu8bda%5Cu4fe1%5Cn%5Cu4e8b%5Cu65e0%5Cu4e0d%5Cu6210%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%22%2C%22status%22%3A%220%22%2C%22sort%22%3A%222%22%7D'),
+(200, 'admin', '::1', 1410921099, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%5Cu4e2d%5Cu6587%5Cu4e0d%5Cu652f%5Cu6301%5Cu5417%5Cuff1f%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%221%22%7D'),
+(201, 'admin', '::1', 1410923076, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%221%22%7D'),
+(202, 'admin', '::1', 1410923124, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%221%22%7D'),
+(203, 'admin', '::1', 1410923765, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%221%22%7D'),
+(204, 'admin', '::1', 1410923906, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(205, 'admin', '::1', 1410923914, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%220%22%2C%22id%22%3A%223%22%2C%22name%22%3A%22%5Cu4f01%5Cu4e1a%5Cu6587%5Cu5316%22%2C%22descrip%22%3A%22%5Cu4e8b%5Cu4ee5%5Cu8bda%5Cu4fe1%5Cn%5Cu4e8b%5Cu65e0%5Cu4e0d%5Cu6210%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%22%2C%22status%22%3A%220%22%2C%22sort%22%3A%223%22%7D'),
+(206, 'admin', '::1', 1410923923, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(207, 'admin', '::1', 1410924244, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(208, 'admin', '::1', 1410924249, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(209, 'admin', '::1', 1410924257, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(210, 'admin', '::1', 1410924344, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(211, 'admin', '::1', 1410924349, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(212, 'admin', '::1', 1410924412, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(213, 'admin', '::1', 1410924534, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(214, 'admin', '::1', 1410924568, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(215, 'admin', '::1', 1410924633, 'index', 'logindo', '登录成功！', '%7B%22initphp_token%22%3A%22af305a48%22%2C%22username%22%3A%22admin%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D'),
+(216, 'admin', '::1', 1410924643, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(217, 'admin', '::1', 1410924673, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(218, 'admin', '::1', 1410924767, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(219, 'admin', '::1', 1410924791, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(220, 'admin', '::1', 1410924871, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(221, 'admin', '::1', 1410924972, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(222, 'admin', '::1', 1410925019, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(223, 'admin', '::1', 1410925061, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(224, 'admin', '::1', 1410927696, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(225, 'admin', '::1', 1410927830, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(226, 'admin', '::1', 1410927852, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(227, 'admin', '::1', 1410927901, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(228, 'admin', '::1', 1410927956, 'ad', 'editdo', '广告位编辑成功', '%7B%22init_token%22%3A%22af305a48%22%2C%22id%22%3A%221%22%2C%22name%22%3A%22asd%22%2C%22tag%22%3A%22aasd%22%2C%22descrip%22%3A%22asd%22%7D'),
+(229, 'admin', '::1', 1410927961, 'ad', 'editdo', '广告位编辑成功', '%7B%22init_token%22%3A%22af305a48%22%2C%22id%22%3A%221%22%2C%22name%22%3A%22asd%22%2C%22tag%22%3A%22aasd%22%2C%22descrip%22%3A%22asd%22%7D'),
+(230, 'admin', '::1', 1410928056, 'ad', 'editdo', '广告位编辑成功', '%7B%22init_token%22%3A%22af305a48%22%2C%22id%22%3A%221%22%2C%22name%22%3A%22banner%22%2C%22tag%22%3A%22home_ad%22%2C%22descrip%22%3A%22%5Cu9996%5Cu9875%5Cu9876%5Cu90e8%5Cu5e7b%5Cu706f%5Cu7247%22%7D'),
+(231, 'admin', '::1', 1410928067, 'ad', 'editdo', '广告位编辑成功', '%7B%22init_token%22%3A%22af305a48%22%2C%22id%22%3A%221%22%2C%22name%22%3A%22banner%22%2C%22tag%22%3A%22home_ad%22%2C%22descrip%22%3A%22%5Cu9996%5Cu9875%5Cu9876%5Cu90e8%5Cu5e7b%5Cu706f%5Cu7247%22%7D'),
+(232, 'admin', '::1', 1410928104, 'ad', 'editdo', '广告位编辑成功', '%7B%22init_token%22%3A%22af305a48%22%2C%22id%22%3A%221%22%2C%22name%22%3A%22banner%22%2C%22tag%22%3A%22home_ad%22%2C%22descrip%22%3A%22%5Cu9996%5Cu9875%5Cu9876%5Cu90e8%5Cu5e7b%5Cu706f%5Cu7247%22%7D'),
+(233, 'admin', '::1', 1410928149, 'ad', 'adeditdo', '广告编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22id%22%3A%221%22%2C%22name%22%3A%22%5Cu767e%5Cu5ea6%22%2C%22descrip%22%3A%22%5Cu4e2d%5Cu56fd%5Cu6700%5Cu5927%5Cu7684%5Cu4e92%5Cu8054%5Cu7f51%5Cu641c%5Cu7d22%5Cu5f15%5Cu64ce%22%2C%22type%22%3A%221%22%2C%22posid%22%3A%221%22%2C%22start_time%22%3A%222014-09-16+09%3A21%3A00%22%2C%22end_time%22%3A%222014-10-16+09%3A21%3A05%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22link%22%3A%22http%3A%5C%2F%5C%2Fbaidu.com%22%2C%22str%22%3A%22%5Cu767e%5Cu5ea6%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%221%22%7D'),
+(234, 'admin', '::1', 1410928183, 'ad', 'adeditdo', '广告编辑成功！', '%7B%22init_token%22%3A%22af305a48%22%2C%22id%22%3A%221%22%2C%22name%22%3A%22%5Cu767e%5Cu5ea6%22%2C%22descrip%22%3A%22%5Cu4e2d%5Cu56fd%5Cu6700%5Cu5927%5Cu7684%5Cu4e92%5Cu8054%5Cu7f51%5Cu641c%5Cu7d22%5Cu5f15%5Cu64ce%22%2C%22type%22%3A%221%22%2C%22posid%22%3A%221%22%2C%22start_time%22%3A%222014-09-16+09%3A21%3A00%22%2C%22end_time%22%3A%222014-10-16+09%3A21%3A05%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22link%22%3A%22http%3A%5C%2F%5C%2Fbaidu.com%22%2C%22str%22%3A%22%5Cu767e%5Cu5ea6%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%221%22%7D'),
+(235, 'admin', '::1', 1410928812, 'index', 'logindo', '登录成功！', '%7B%22initphp_token%22%3A%22af305a48%22%2C%22username%22%3A%22admin%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D'),
+(236, 'admin', '::1', 1410941861, 'index', 'logindo', '登录成功！', '%7B%22initphp_token%22%3A%22475432e8%22%2C%22username%22%3A%22admin%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D'),
+(237, 'admin', '127.0.0.1', 1410942210, 'index', 'logindo', '登录成功！', '%7B%22initphp_token%22%3A%222ce0bb44%22%2C%22username%22%3A%22admin%22%2C%22password%22%3A%22%2A%2A%2A%2A%2A%2A%22%7D'),
+(238, 'admin', '127.0.0.1', 1410942222, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%222ce0bb44%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%222%22%7D'),
+(239, 'admin', '127.0.0.1', 1410944996, 'single', 'edit_do', '单页编辑成功！', '%7B%22init_token%22%3A%222ce0bb44%22%2C%22type%22%3A%221%22%2C%22id%22%3A%222%22%2C%22name%22%3A%22%5Cu516c%5Cu53f8%5Cu7b80%5Cu4ecb%22%2C%22descrip%22%3A%22%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%26lt%3Bspan+style%3D%5C%5C%26quot%3Bcolor%3A%23009900%3B%5C%5C%26quot%3B%26gt%3B%5Cu5927%5Cu53ef%5Cu4e07%5Cu7ef4%5Cuff01%26lt%3B%5C%2Fspan%26gt%3B%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%22100%22%7D'),
+(240, 'admin', '127.0.0.1', 1410945020, 'single', 'add_do', '单页新增成功', '%7B%22init_token%22%3A%222ce0bb44%22%2C%22name%22%3A%22Test+editor%22%2C%22descrip%22%3A%22%22%2C%22type%22%3A%221%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22cs%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%220%22%7D'),
+(241, 'admin', '127.0.0.1', 1410945027, 'single', 'del', '单页删除成功', '%7B%22id%22%3A%224%22%2C%22init_token%22%3A%222ce0bb44%22%7D'),
+(242, 'admin', '127.0.0.1', 1410945030, 'single', 'add_do', '单页名称不得为空！', '%7B%22init_token%22%3A%222ce0bb44%22%2C%22name%22%3A%22%22%2C%22descrip%22%3A%22%22%2C%22type%22%3A%220%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%220%22%7D'),
+(243, 'admin', '127.0.0.1', 1410945038, 'single', 'add_do', '单页名称不得为空！', '%7B%22init_token%22%3A%222ce0bb44%22%2C%22name%22%3A%22%22%2C%22descrip%22%3A%22%22%2C%22type%22%3A%220%22%2C%22img_width%22%3A%22100%22%2C%22img_height%22%3A%22100%22%2C%22str%22%3A%22%22%2C%22status%22%3A%221%22%2C%22sort%22%3A%220%22%7D');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `initapp_admin_user`
+-- 表的结构 `dake_admin_user`
 --
 
-CREATE TABLE IF NOT EXISTS `initapp_admin_user` (
+CREATE TABLE IF NOT EXISTS `dake_admin_user` (
   `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL DEFAULT '',
   `password` varchar(32) NOT NULL DEFAULT '',
@@ -284,19 +335,19 @@ CREATE TABLE IF NOT EXISTS `initapp_admin_user` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- 转存表中的数据 `initapp_admin_user`
+-- 转存表中的数据 `dake_admin_user`
 --
 
-INSERT INTO `initapp_admin_user` (`uid`, `username`, `password`, `hash`, `email`, `create_time`, `create_ip`, `update_time`, `last_time`, `groupid`) VALUES
-(1, 'admin', 'c4a15f693b7412f454a129c73b7d8767', 'sg899c', '420332292@qq.om', 1328677231, '', 1410858110, 1410858110, 1);
+INSERT INTO `dake_admin_user` (`uid`, `username`, `password`, `hash`, `email`, `create_time`, `create_ip`, `update_time`, `last_time`, `groupid`) VALUES
+(1, 'admin', 'c4a15f693b7412f454a129c73b7d8767', 'sg899c', '420332292@qq.om', 1328677231, '', 1410942210, 1410942210, 1);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `initapp_admin_user_login`
+-- 表的结构 `dake_admin_user_login`
 --
 
-CREATE TABLE IF NOT EXISTS `initapp_admin_user_login` (
+CREATE TABLE IF NOT EXISTS `dake_admin_user_login` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ip` varchar(25) NOT NULL DEFAULT '',
   `update_time` int(10) unsigned NOT NULL DEFAULT '0',
@@ -306,10 +357,10 @@ CREATE TABLE IF NOT EXISTS `initapp_admin_user_login` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
--- 转存表中的数据 `initapp_admin_user_login`
+-- 转存表中的数据 `dake_admin_user_login`
 --
 
-INSERT INTO `initapp_admin_user_login` (`id`, `ip`, `update_time`, `data`) VALUES
+INSERT INTO `dake_admin_user_login` (`id`, `ip`, `update_time`, `data`) VALUES
 (1, '::1', 1410245231, ''),
 (2, '::1', 1410245238, ''),
 (3, '::1', 1410245267, 'admin'),
@@ -327,10 +378,10 @@ INSERT INTO `initapp_admin_user_login` (`id`, `ip`, `update_time`, `data`) VALUE
 -- --------------------------------------------------------
 
 --
--- 表的结构 `initapp_ad_content`
+-- 表的结构 `dake_ad_content`
 --
 
-CREATE TABLE IF NOT EXISTS `initapp_ad_content` (
+CREATE TABLE IF NOT EXISTS `dake_ad_content` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `posid` int(10) unsigned NOT NULL DEFAULT '0',
   `type` tinyint(4) unsigned NOT NULL DEFAULT '0',
@@ -346,19 +397,19 @@ CREATE TABLE IF NOT EXISTS `initapp_ad_content` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- 转存表中的数据 `initapp_ad_content`
+-- 转存表中的数据 `dake_ad_content`
 --
 
-INSERT INTO `initapp_ad_content` (`id`, `posid`, `type`, `name`, `descrip`, `create_time`, `content`, `status`, `start_time`, `end_time`, `sort`) VALUES
-(1, 1, 1, '测试', '测试', 1410830494, '{"str":"%E7%99%BE%E5%BA%A6","link":"http%3A%2F%2Fbaidu.com"}', 1, 1410859260, 1413451265, 1);
+INSERT INTO `dake_ad_content` (`id`, `posid`, `type`, `name`, `descrip`, `create_time`, `content`, `status`, `start_time`, `end_time`, `sort`) VALUES
+(1, 1, 1, '百度', '中国最大的互联网搜索引擎', 1410830494, '{"str":"%E7%99%BE%E5%BA%A6","link":"http%3A%2F%2Fbaidu.com"}', 1, 1410859260, 1413451265, 1);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `initapp_ad_position`
+-- 表的结构 `dake_ad_position`
 --
 
-CREATE TABLE IF NOT EXISTS `initapp_ad_position` (
+CREATE TABLE IF NOT EXISTS `dake_ad_position` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `tag` varchar(20) NOT NULL DEFAULT '',
   `name` varchar(60) NOT NULL DEFAULT '',
@@ -369,19 +420,19 @@ CREATE TABLE IF NOT EXISTS `initapp_ad_position` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- 转存表中的数据 `initapp_ad_position`
+-- 转存表中的数据 `dake_ad_position`
 --
 
-INSERT INTO `initapp_ad_position` (`id`, `tag`, `name`, `descrip`, `create_time`) VALUES
-(1, 'aasd', 'asd', 'asd', 1410254886);
+INSERT INTO `dake_ad_position` (`id`, `tag`, `name`, `descrip`, `create_time`) VALUES
+(1, 'home_ad', 'banner', '首页顶部幻灯片', 1410254886);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `initapp_single`
+-- 表的结构 `dake_single`
 --
 
-CREATE TABLE IF NOT EXISTS `initapp_single` (
+CREATE TABLE IF NOT EXISTS `dake_single` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `type` tinyint(4) unsigned NOT NULL DEFAULT '0',
   `name` varchar(60) NOT NULL DEFAULT '',
@@ -396,30 +447,30 @@ CREATE TABLE IF NOT EXISTS `initapp_single` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- 转存表中的数据 `initapp_single`
+-- 转存表中的数据 `dake_single`
 --
 
-INSERT INTO `initapp_single` (`id`, `type`, `name`, `descrip`, `create_time`, `content`, `status`, `start_time`, `end_time`, `sort`) VALUES
-(2, 1, '公司简介', '大可万维', 1410834315, '{"str":"柱哥你试一试，这块上传有问题"}', 1, 0, 0, 1),
-(3, 0, '企业文化', '事以诚信\r\n事无不成', 1410836800, '{"img":"data%2Fattachment%2Fsingle%2F2014%2F09%2F16%2F20140916030640182641.jpg"}', 0, 0, 0, 0);
+INSERT INTO `dake_single` (`id`, `type`, `name`, `descrip`, `create_time`, `content`, `status`, `start_time`, `end_time`, `sort`) VALUES
+(2, 1, '公司简介', '大可万维', 1410834315, '{"str":"%3Cspan+style%3D%5C%22color%3A%23009900%3B%5C%22%3E%E5%A4%A7%E5%8F%AF%E4%B8%87%E7%BB%B4%EF%BC%81%3C%2Fspan%3E"}', 1, 0, 0, 100),
+(3, 0, '企业文化', '事以诚信\r\n事无不成', 1410836800, '{"img":"data%2Fattachment%2Fsingle%2F2014%2F09%2F16%2F20140916030640182641.jpg"}', 0, 0, 0, 3);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `initapp_site_config`
+-- 表的结构 `dake_site_config`
 --
 
-CREATE TABLE IF NOT EXISTS `initapp_site_config` (
+CREATE TABLE IF NOT EXISTS `dake_site_config` (
   `k` varchar(20) NOT NULL DEFAULT '',
   `v` text NOT NULL,
   PRIMARY KEY (`k`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `initapp_site_config`
+-- 转存表中的数据 `dake_site_config`
 --
 
-INSERT INTO `initapp_site_config` (`k`, `v`) VALUES
+INSERT INTO `dake_site_config` (`k`, `v`) VALUES
 ('site_basic_config', '{"title":"%E5%A4%A7%E5%8F%AF%E4%B8%87%E7%BB%B4","url":"http%3A%2F%2Fwww.dake.so","keywords":"%E5%A4%A7%E5%8F%AF%E4%B8%87%E7%BB%B4","description":"%E4%BA%92%E8%81%94%E4%B8%96%E7%95%8C%EF%BC%8C%E5%A4%A7%E6%9C%89%E5%8F%AF%E4%B8%BA","beian":"","version":"","holder":"Dake","tel":"13196041405","address":"%E5%89%8D%E8%BF%9B%E5%A4%A7%E8%A1%97"}');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

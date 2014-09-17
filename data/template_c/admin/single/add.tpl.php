@@ -1,4 +1,4 @@
-<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 15:17:33, compiled from E:\VertrigoServ\www\dake/web/template/admin/single/add.htm */ ?>
+<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-17 09:11:02, compiled from E:\www\dake/web/template/admin/single/add.htm */ ?>
 <div class="content_tab">
   <ul>
     <li  name="<?php echo $singleRun; ?>">单页管理</li>

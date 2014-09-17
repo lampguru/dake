@@ -1,11 +1,11 @@
 <?php
 /**
- * InitApp 后台用户 登录错误次数记录表 
+ * Dake 后台用户 登录错误次数记录表 
  * @author zhuli
  */
 class AdminUserLoginDao extends BaseDao {
 	
-	protected $table_name = 'initapp_admin_user_login';
+	protected $table_name = 'dake_admin_user_login';
 	
 	/**
 	 * 新增记录

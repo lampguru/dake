@@ -4,7 +4,7 @@
  */
 class AdDao extends BaseDao {
 	
-	protected $table_name = 'initapp_ad_content';
+	protected $table_name = 'dake_ad_content';
 	
 	/**
 	 * 新增广告

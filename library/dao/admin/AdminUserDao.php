@@ -1,11 +1,11 @@
 <?php
 /**
- * InitApp 后台用户Dao
+ * Dake 后台用户Dao
  * @author zhuli
  */
 class AdminUserDao extends BaseDao {
 	
-	protected $table_name = 'initapp_admin_user';
+	protected $table_name = 'dake_admin_user';
 	
 	/**
 	 * 新增用户

@@ -1,13 +1,13 @@
 <?php
 /**
- * 单页
+ * 分类
  * @author dake
  */
-class SingleDao extends BaseDao {
-	protected $table_name = 'dake_single';
+class TreeDao extends BaseDao {
+	protected $table_name = 'dake_tree';
 	
 	/**
-	 * 新增单页
+	 * 新增分类
 	 * 
 	 * @param array $data        	
 	 * @return int
@@ -19,7 +19,7 @@ class SingleDao extends BaseDao {
 	}
 	
 	/**
-	 * 编辑单页
+	 * 编辑分类
 	 * 
 	 * @param int $id        	
 	 * @param array $data        	
@@ -33,7 +33,7 @@ class SingleDao extends BaseDao {
 	}
 	
 	/**
-	 * 删除单页
+	 * 删除分类
 	 * 
 	 * @param int $uid        	
 	 * @return bool
@@ -44,7 +44,7 @@ class SingleDao extends BaseDao {
 	}
 	
 	/**
-	 * 获取一个单页信息
+	 * 获取一个分类信息
 	 * 
 	 * @param int $id        	
 	 * @return array
@@ -57,10 +57,25 @@ class SingleDao extends BaseDao {
 	}
 	
 	/**
+	 * 【Cache-有时间期效缓存】通过pid获取所有子类
+	 * @param string $pid
+	 */
+	public function getByPid($pid) {
+		$value = $this->dao->cache->get($this->cacheKey($pid), CACHE_TYPE);
+		if (!$value) {
+			$where  = $this->dao->db->build_where(array('pid' => $pid));
+			$sql    = sprintf("SELECT * FROM %s %s ", $this->table_name, $where);
+			$value  = $this->dao->db->get_one_sql($sql);
+			$this->dao->cache->set($this->cacheKey($tag), $value, CACHE_TIME, CACHE_TYPE);
+		}
+		return $value;
+	}
+	
+	/**
 	 * 获取分页列表
 	 * 
-	 * @param int $page        	
-	 * @param int $perpage        	
+	 * @param int $page
+	 * @param int $perpage
 	 * @return Array
 	 */
 	public function getList($page, $perpage) {
@@ -70,5 +85,13 @@ class SingleDao extends BaseDao {
 			$page = 1;
 		$page = ($page - 1) * $perpage;
 		return $this->dao->db->get_all ( $this->table_name, $perpage, $page );
+	}
+	
+	/**
+	 * 获取全部分类
+	 */
+	public function getAll() {
+		$sql = sprintf("SELECT * FROM %s ", $this->table_name);
+		return $this->dao->db->get_all_sql($sql);
 	}
 }

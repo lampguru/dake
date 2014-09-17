@@ -1,6 +1,6 @@
 <?php
 /**
- * 单页管理
+ * 单页
  * @author dake
  */
 class SingleService extends BaseService {
@@ -10,8 +10,8 @@ class SingleService extends BaseService {
 	 * 参数结构:
 	 * array(
 	 * 'type' => 单页类型
-	 * 'name' => 单页名词
-	 * 'descrip' => 单页详细内容
+	 * 'name' => 单页名
+	 * 'descrip' => 单页描述
 	 * )
 	 * 
 	 * @param array $data        	
@@ -126,8 +126,7 @@ class SingleService extends BaseService {
 		if ($type == false) { // 新增 组装content字段
 			if ($data ['type'] == 1) {
 				$data ['content'] = json_encode ( array (
-						//'str' => urlencode ( $data ['str'] )
-						'str' => $data ['str'] 
+						'str' => urlencode ( $data ['str'] )
 				) );
 			} else {
 				if (isset ( $data ['img'] )) {
@@ -141,7 +140,7 @@ class SingleService extends BaseService {
 		} else {
 			if ($data ['type'] == 1) {
 				$data ['content'] = json_decode ( $data ['content'], TRUE );
-				$data ['str'] =  $data ['content'] ['str'] ;
+				$data ['str'] =  urldecode ( $data ['content'] ['str'] );
 			} else {
 				$data ['content'] = json_decode ( $data ['content'], TRUE );
 				$data ['img'] = urldecode ( $data ['content'] ['img'] );

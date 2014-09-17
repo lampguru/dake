@@ -119,7 +119,7 @@ $InitPHP_conf['cache']['filepath'] = 'data/filecache';   //文件缓存目录
 $InitPHP_conf['db']['driver']   = 'mysqli'; //选择不同的数据库DB 引擎，一般默认mysqli,或者mysqls
 //default数据库配置 一般使用中 $this->init_db('default')-> 或者 $this->init_db()-> 为默认的模型
 $InitPHP_conf['db']['default']['db_type']                   = 0; //0-单个服务器，1-读写分离，2-随机
-$InitPHP_conf['db']['default'][0]['host']                   = 'localhost'; //主机
+$InitPHP_conf['db']['default'][0]['host']                   = '127.0.0.1'; //主机
 $InitPHP_conf['db']['default'][0]['username']               = 'root'; //数据库用户名
 $InitPHP_conf['db']['default'][0]['password']               = 'vertrigo'; //数据库密码
 $InitPHP_conf['db']['default'][0]['database']               = 'dake'; //数据库

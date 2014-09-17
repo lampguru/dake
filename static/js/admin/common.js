@@ -10,9 +10,9 @@ var submitForm = function (id, url) {
 	$('#' + id).submit(function(){
 		 ajaxLoad.start();
 		 $('#' + id).ajaxSubmit(function(result) {
+			 result = $.parseJSON($(result).text());
 				ajaxLoad.end();
 				if (url == '') url = location.href;
-				//result = eval('(' + result + ')');
 				if (result.status == 0) {
 					sAlert('失败提示', '<img src="static/images/admin/no.gif">&nbsp;&nbsp;' + result.message+ '<br/><a  id="msg_close" href="javascript:void 0">点击关闭</a>');
 					//sAlert('错误提示', result.message);

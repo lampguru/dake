@@ -1,11 +1,11 @@
 <?php
 /**
- * InitApp 网站站点配置Dao
+ * Dake 网站站点配置Dao
  * @author zhuli
  */
 class ConfDao extends BaseDao {
     
-    protected $table_name = 'initapp_site_config';
+    protected $table_name = 'dake_site_config';
     
     /**
      * 新增网站配置

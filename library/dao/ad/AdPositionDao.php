@@ -4,7 +4,7 @@
  */
 class AdPositionDao extends BaseDao {
 	
-	protected $table_name = 'initapp_ad_position';
+	protected $table_name = 'dake_ad_position';
 	
 	/**
 	 * 新增广告位

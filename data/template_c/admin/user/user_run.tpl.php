@@ -1,4 +1,4 @@
-<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 14:04:47, compiled from E:\VertrigoServ\www\dake/web/template/admin/user/user_run.htm */ ?>
+<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-17 08:58:30, compiled from E:\www\dake/web/template/admin/user/user_run.htm */ ?>
 <div class="content_tab">
   <ul>
     <li class="checked"  name="<?php echo $userRun; ?>">管理员列表</li>

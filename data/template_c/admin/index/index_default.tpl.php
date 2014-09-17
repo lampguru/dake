@@ -1,6 +1,6 @@
-<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 15:32:52, compiled from E:\VertrigoServ\www\dake/web/template/admin/index/index_default.htm */ ?>
+<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-17 09:09:46, compiled from E:\www\dake/web/template/admin/index/index_default.htm */ ?>
 <div class="content">
-  <h1>InitApp</h1>
+  <h1>Dake</h1>
   <table>
     <tr>
       <th width="200">版本</th>

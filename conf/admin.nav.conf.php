@@ -26,6 +26,15 @@ $sidebar['system']['site']['option'] = array(
 	array('访问控制操作', 'access', 'editdo', 0),
 );
 $nav['extend'] = '扩展';
+$sidebar['extend']['single']['title'] = '单页管理';
+$sidebar['extend']['single']['option'] = array(
+	array('单页管理', 'single', 'run', 1),
+	array('新增单页', 'single', 'add', 0),
+	array('新增单页操作', 'single', 'add_do', 0),
+	array('编辑单页', 'single', 'edit', 0),
+	array('编辑单页操作', 'single', 'edit_do', 0), 
+	array('删除单页', 'single', 'del', 0),
+);
 $sidebar['extend']['ad']['title'] = '广告管理';
 $sidebar['extend']['ad']['option'] = array(
 	array('广告位管理', 'ad', 'run', 1),
@@ -40,15 +49,6 @@ $sidebar['extend']['ad']['option'] = array(
 	array('编辑广告', 'ad', 'adedit', 0),
 	array('编辑广告操作', 'ad', 'adeditdo', 0),
 	array('删除广告', 'ad', 'addel', 0),
-);
-$sidebar['extend']['single']['title'] = '单页管理';
-$sidebar['extend']['single']['option'] = array(
-	array('单页管理', 'single', 'run', 1),
-	array('新增单页', 'single', 'add', 0),
-	array('新增单页操作', 'single', 'add_do', 0),
-	array('编辑单页', 'single', 'edit', 0),
-	array('编辑单页操作', 'single', 'edit_do', 0), 
-	array('删除单页', 'single', 'del', 0),
 );
 
 return array('nav' => $nav, 'sidebar' => $sidebar);

@@ -1,11 +1,11 @@
 <?php
 /**
- * InitApp 后台用户日志
+ * Dake 后台用户日志
  * @author zhuli
  */
 class AdminLogDao extends BaseDao {
 	
-	protected $table_name = 'initapp_admin_log';
+	protected $table_name = 'dake_admin_log';
 	
 	/**
 	 * 新增日志
