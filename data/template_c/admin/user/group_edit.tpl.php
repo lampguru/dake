@@ -1,4 +1,4 @@
-<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-16 15:25:42, compiled from E:\VertrigoServ\www\dake/web/template/admin/user/group_edit.htm */ ?>
+<?php  if (!defined("IS_INITPHP")) exit("Access Denied!");  /* INITPHP Version 1.0 ,Create on 2014-09-19 00:50:32, compiled from E:\www\dake/web/template/admin/user/group_edit.htm */ ?>
 <div class="content_tab"><ul>
 <li class="checked" name="<?php echo $groupRun; ?>">用户组列表</li>
 <li name="<?php echo $groupAdd; ?>">新增用户组</li>

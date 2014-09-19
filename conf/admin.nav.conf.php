@@ -26,6 +26,21 @@ $sidebar['system']['site']['option'] = array(
 	array('访问控制操作', 'access', 'editdo', 0),
 );
 $nav['extend'] = '扩展';
+$sidebar['extend']['single']['title'] = '新闻管理';
+$sidebar['extend']['single']['option'] = array(
+	array('分类管理', 'ad', 'run', 1),
+	array('新增分类', 'ad', 'add', 0),
+	array('新增分类操作', 'ad', 'adddo', 0),
+	array('编辑分类', 'ad', 'edit', 0),
+	array('编辑分类操作', 'ad', 'editdo', 0), 
+	array('删除分类', 'ad', 'del', 0),
+	array('新闻管理', 'ad', 'adlist', 1),
+	array('新增新闻', 'ad', 'adadd', 0),
+	array('新增新闻操作', 'ad', 'adadddo', 0),
+	array('编辑新闻', 'ad', 'adedit', 0),
+	array('编辑新闻操作', 'ad', 'adeditdo', 0),
+	array('删除新闻', 'ad', 'addel', 0),
+);
 $sidebar['extend']['single']['title'] = '单页管理';
 $sidebar['extend']['single']['option'] = array(
 	array('单页管理', 'single', 'run', 1),
